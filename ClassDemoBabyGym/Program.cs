@@ -18,6 +18,8 @@ Console.WriteLine(kat);
 
 Hold FundetHold = kat.FindHold(34);
 Console.WriteLine(FundetHold);
+FundetHold = kat.FindHoldWhile(34);
+Console.WriteLine(FundetHold);
 
 
 Deltager deltager = new Deltager("Peter", "Roskilde", 2);
@@ -35,6 +37,11 @@ catch(ArgumentException ae)
 }
 
 
-
+double pris = hold.BeregnTotalPris(1);
+Console.WriteLine(pris);
+pris = hold.BeregnTotalPris(2);
+Console.WriteLine(pris);
+pris = hold.BeregnTotalPris(3);
+Console.WriteLine(pris);
 
 

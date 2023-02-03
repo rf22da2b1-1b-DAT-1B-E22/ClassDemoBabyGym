@@ -60,5 +60,26 @@ namespace ClassDemoBabyGym.model
 
             //return String.Join(", ", _hold);
         }
+
+
+
+        public Hold FindHoldWhile(int holdId)
+        {
+            int ix = 0;
+            while (ix < _hold.Count)
+            {
+                if (_hold[ix].HoldId == holdId)
+                {
+                    return _hold[ix];
+                }
+
+                ix = ix + 1;
+            }
+
+
+            return null;
+        }
+
+
     }
 }

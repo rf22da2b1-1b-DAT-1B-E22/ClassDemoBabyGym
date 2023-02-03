@@ -82,5 +82,24 @@ namespace ClassDemoBabyGym.model
         {
             return $"HoldId= {_holdId}, Navn={_holdNavn}, Pris={_prisPrDeltager}, max antal={_maxAntalBørn}";
         }
+
+
+
+
+        public Double BeregnTotalPris(int antalBørn)
+        {
+            if (antalBørn <= 0) throw new ArgumentException("antalbørn skal være større end 0");
+
+            // første fuld pris
+            double total = _prisPrDeltager;
+
+            // derefter halv pris
+            if (antalBørn > 1)
+            {
+                total = total + (antalBørn - 1) * _prisPrDeltager *0.5;
+            }
+
+            return total;
+        }
     }
 }
